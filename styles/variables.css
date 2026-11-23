@@ -1,0 +1,56 @@
+:root {
+  /* Paleta unificada FidelizaCard - Tono cálido editorial */
+  --bg-main: #F6EFEA;
+  --bg-desktop-outer: #EDE3DA;
+  --surface-card: #FDFBF9;
+  --surface-muted: #EFE5DC;
+  --border-subtle: #E6D8CE;
+
+  --brand-primary: #B84A27;
+  --brand-primary-hover: #9E3D1E;
+  --brand-soft: #F7E7E0;
+
+  --text-primary: #2C1A12;
+  --text-secondary: #6E564B;
+
+  --whatsapp-green: #1E8E5A;
+  --whatsapp-green-hover: #177348;
+
+  /* Estados y etiquetas */
+  --status-open-bg: #E6F4EC;
+  --status-open-text: #1A6B44;
+  --status-closed-bg: #F9E5E2;
+  --status-closed-text: #9E2E22;
+
+  --tag-fav-bg: #F5ECD9;
+  --tag-fav-text: #8A5A12;
+  --tag-spicy-bg: #FCE8E2;
+  --tag-spicy-text: #B84A27;
+  --tag-new-bg: #E6F4EC;
+  --tag-new-text: #1A6B44;
+
+  --error-text: #B42318;
+  --error-bg: #FEF3F2;
+
+  /* Tipografía */
+  --font-editorial: 'Georgia', 'Times New Roman', serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* Espaciado y radios */
+  --radius-card: 16px;
+  --radius-input: 12px;
+  --radius-pill: 999px;
+
+  /* Sombras suaves */
+  --shadow-shell: 0 12px 40px rgba(44, 26, 18, 0.08);
+  --shadow-card: 0 2px 8px rgba(44, 26, 18, 0.03);
+  --shadow-float: 0 8px 24px rgba(44, 26, 18, 0.18);
+  --shadow-drawer: 0 -8px 32px rgba(44, 26, 18, 0.16);
+
+  /* Capas */
+  --z-sticky: 20;
+  --z-cart-bar: 30;
+  --z-drawer-backdrop: 40;
+  --z-drawer: 50;
+  --z-toast: 60;
+}

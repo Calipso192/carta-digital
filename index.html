@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F6EFEA">
+  <title>Carta Digital Demo · BLAP Street Food</title>
+  <link rel="stylesheet" href="./styles/variables.css">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/cart-drawer.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+    <header class="store-header">
+      <span id="store-badge" class="store-badge">FAST FOOD &amp; BURGERS • PEDIDO DIRECTO</span>
+      <h1 id="store-name" class="store-title">BLAP · STREET FOOD</h1>
+      <p id="store-subtitle" class="store-subtitle">Smash burgers, alitas crocantes y combos hechos al momento.</p>
+
+      <div class="store-status-row">
+        <span id="store-status" class="status-pill">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span id="store-status-text">Abierto ahora</span>
+        </span>
+      </div>
+
+      <div class="header-actions">
+        <a
+          id="direct-whatsapp-btn"
+          class="pill-btn pill-btn--whatsapp"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp directo
+        </a>
+        <a
+          id="fideliza-btn"
+          class="pill-btn pill-btn--points"
+          href="https://calipso192.github.io/fideliza-card/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🎁 Mis Puntos
+        </a>
+      </div>
+    </header>
+
+    <section class="menu-controls" aria-label="Búsqueda y categorías">
+      <div class="search-box">
+        <span class="search-icon" aria-hidden="true">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </span>
+        <input
+          id="search-input"
+          class="search-input"
+          type="search"
+          placeholder="Buscar burger, alitas, bebida..."
+          autocomplete="off"
+          aria-label="Buscar platos"
+        >
+        <button id="search-clear-btn" class="search-clear-btn" type="button" aria-label="Limpiar búsqueda" hidden>
+          ✕
+        </button>
+      </div>
+
+      <nav id="category-tabs" class="category-tabs" aria-label="Categorías del menú"></nav>
+    </section>
+
+    <main class="menu-main">
+      <h2 id="menu-section-heading" class="menu-section-heading">Nuestra Carta</h2>
+      <div id="menu-list" class="menu-list"></div>
+    </main>
+
+    <footer class="store-footer">
+      <p class="privacy-notice">
+        Aviso de privacidad (Ley 29733 - Perú): Los datos de tu pedido y carrito se almacenan únicamente en el navegador de tu dispositivo (Local-First) y no se envían ni guardan en servidores externos.
+      </p>
+    </footer>
+  </div>
+
+  <div id="cart-bar-wrap" class="cart-bar-wrap" hidden>
+    <button id="open-cart-btn" class="cart-bar-btn" type="button">
+      <span id="cart-bar-summary">Ver pedido • 0 ítems</span>
+      <span id="cart-bar-total">S/ 0.00</span>
+    </button>
+  </div>
+
+  <div id="drawer-backdrop" class="drawer-backdrop" hidden></div>
+  <section
+    id="cart-drawer"
+    class="cart-drawer"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="drawer-title"
+    hidden
+  >
+    <div class="drawer-header">
+      <h2 id="drawer-title" class="drawer-title">Tu Pedido</h2>
+      <div class="drawer-header-actions">
+        <button id="clear-cart-btn" class="text-btn" type="button">Vaciar</button>
+        <button id="close-drawer-btn" class="close-drawer-btn" type="button" aria-label="Cerrar resumen">✕</button>
+      </div>
+    </div>
+
+    <div id="drawer-body" class="drawer-body"></div>
+
+    <div class="drawer-footer">
+      <div class="order-total-row">
+        <span>Total a pagar</span>
+        <span id="drawer-total-amount" class="order-total-amount">S/ 0.00</span>
+      </div>
+      <button id="send-whatsapp-btn" class="whatsapp-submit-btn" type="button">
+        Enviar pedido por WhatsApp
+      </button>
+    </div>
+  </section>
+
+  <script type="module" src="./scripts/main.js"></script>
+</body>
+</html>
